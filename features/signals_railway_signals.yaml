@@ -2832,6 +2832,40 @@ features:
       - { tag: 'railway:signal:route', value: 'DE-ESO:zs2' }
       - { tag: 'railway:signal:route:form', value: 'light' }
 
+  - description: tram switch signal
+    country: DE
+    icon:
+      match: 'railway:signal:switch:states'
+      cases:
+        - { exact: 'DE-BOStrab:w14', value: 'de/bostrab/w14' }
+        - { any: ['DE-VBK:w14'], value: 'de/bostrab/w14-yellow' }
+        - { exact: 'DE-BOStrab:w13', value: 'de/bostrab/w13' }
+        - { any: ['DE-VBK:w13'], value: 'de/bostrab/w13-yellow' }
+        - { exact: 'DE-BOStrab:w3', value: 'de/bostrab/w3' }
+        - { any: ['DE-VBK:w3'], value: 'de/bostrab/w3-yellow' }
+        - { exact: 'DE-BOStrab:w12', value: 'de/bostrab/w12' }
+        - { any: ['DE-VBK:w12'], value: 'de/bostrab/w12-yellow' }
+        - { exact: 'DE-BOStrab:w2', value: 'de/bostrab/w2' }
+        - { any: ['DE-VBK:w2'], value: 'de/bostrab/w2-yellow' }
+        - { exact: 'DE-BOStrab:w11', value: 'de/bostrab/w11' }
+        - { any: ['DE-VBK:w11'], value: 'de/bostrab/w11-yellow' }
+        - { exact: 'DE-BOStrab:w1', value: 'de/bostrab/w1' }
+        - { any: ['DE-VBK:w1'], value: 'de/bostrab/w1-yellow' }
+        - { exact: 'DE-BOStrab:w0', value: 'de/bostrab/w0' }
+        - { any: ['DE-VBK:w5'], value: 'de/bostrab/w0-yellow' }
+      default: 'de/bostrab/w-unknown'
+    tags:
+      - { tag: 'railway:signal:switch', any: ['DE-BOStrab:w', 'DE-VBK:w'] }
+      - { tag: 'railway:signal:main:form', value: 'light' }
+
+  - description: tram no trailing-point movement (sign)
+    country: DE
+    icon: { default: 'de/bostrab/w14-sign' }
+    tags:
+      - { tag: 'railway:signal:switch', value: 'DE-BOStrab:w' }
+      - { tag: 'railway:signal:switch:form', value: 'sign' }
+      - { tag: 'railway:signal:switch:states', exact: 'DE-BOStrab:w14' }
+
   - description: tram signal contact
     country: DE
     icon: { default: 'de/bostrab/st1' }
