@@ -153,6 +153,9 @@ tags:
   - { tag: 'railway:signal:stop_demand', description: 'Stop demand' }
   - { tag: 'railway:signal:stop_demand:form', description: 'Stop demand form' }
   - { tag: 'railway:signal:stop_demand:deactivated', description: 'Stop demand deactivated', type: boolean }
+  - { tag: 'railway:signal:switch', description: 'Switch' }
+  - { tag: 'railway:signal:switch:form', description: 'Switch form' }
+  - { tag: 'railway:signal:switch:states', description: 'Switch states', type: array }
   - { tag: 'railway:signal:train_protection', description: 'Train protection' }
   - { tag: 'railway:signal:train_protection:form', description: 'Train protection form' }
   - { tag: 'railway:signal:train_protection:shape', description: 'Train protection shape' }
@@ -2828,6 +2831,20 @@ features:
     tags:
       - { tag: 'railway:signal:route', value: 'DE-ESO:zs2' }
       - { tag: 'railway:signal:route:form', value: 'light' }
+
+  - description: tram signal contact
+    country: DE
+    icon: { default: 'de/bostrab/st1' }
+    tags:
+      - { tag: 'railway:signal:switch', value: 'DE-BOStrab:st1' }
+      - { tag: 'railway:signal:switch:form', value: 'sign' }
+
+  - description: tram switch contact
+    country: DE
+    icon: { default: 'de/bostrab/st2' }
+    tags:
+      - { tag: 'railway:signal:switch', value: 'DE-BOStrab:st2' }
+      - { tag: 'railway:signal:switch:form', value: 'sign' }
 
   - description: power off advance sign El 1v
     country: DE
